@@ -5,6 +5,11 @@
     >
       {{ props.title }}
     </h2>
+    <p
+      class="w-36 max-w-xs text-xl text-slate-600 leading-relaxed tracking-wide"
+    >
+      <slot></slot>
+    </p>
   </header>
 </template>
 <script setup>
