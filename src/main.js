@@ -4,8 +4,8 @@ import router from "./router";
 
 // CSS
 import "./assets/tailwind.css";
-// Icons
 
+// Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
