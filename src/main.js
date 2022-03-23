@@ -10,9 +10,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 // Specific Icons
 import { faBarsStaggard as faBarsStaggard } from "@fortawesome/pro-solid-svg-icons";
+import { faXmark as faXmark } from "@fortawesome/pro-solid-svg-icons";
 import { faToggleOn as faToggleOn } from "@fortawesome/pro-solid-svg-icons";
 import { faToggleOff as faToggleOff } from "@fortawesome/pro-solid-svg-icons";
 
-library.add(faBarsStaggard, faToggleOn, faToggleOff);
+library.add(faBarsStaggard, faXmark, faToggleOn, faToggleOff);
 
 createApp(App).use(router).mount("#app");
