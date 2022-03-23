@@ -7,7 +7,12 @@ import "./assets/tailwind.css";
 
 // Read the docs: https://fontawesome.com/v6/docs/web/use-with/vue/add-icons
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBarsStaggard as faBars } from "@fortawesome/pro-solid-svg-icons";
-library.add(faBarsStaggard);
+
+// Specific Icons
+import { faBarsStaggard as faBarsStaggard } from "@fortawesome/pro-solid-svg-icons";
+import { faToggleOn as faToggleOn } from "@fortawesome/pro-solid-svg-icons";
+import { faToggleOff as faToggleOff } from "@fortawesome/pro-solid-svg-icons";
+
+library.add(faBarsStaggard, faToggleOn, faToggleOff);
 
 createApp(App).use(router).mount("#app");
