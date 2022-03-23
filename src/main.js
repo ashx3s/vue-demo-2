@@ -4,16 +4,14 @@ import router from "./router";
 
 // CSS
 import "./assets/tailwind.css";
+// Icons
 
-// Read the docs: https://fontawesome.com/v6/docs/web/use-with/vue/add-icons
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // Specific Icons
-import { faBarsStaggard as faBarsStaggard } from "@fortawesome/pro-solid-svg-icons";
-import { faCircleXmark as faCircleXmark } from "@fortawesome/pro-solid-svg-icons";
-import { faToggleOn as faToggleOn } from "@fortawesome/pro-solid-svg-icons";
-import { faToggleOff as faToggleOff } from "@fortawesome/pro-solid-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBarsStaggard, faCircleXmark, faToggleOn, faToggleOff);
+library.add(fas);
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).component("fa", FontAwesomeIcon).mount("#app");

@@ -1,11 +1,14 @@
 <template>
-  <header class="grid w-full bg-slate-900">
-    <the-navigation> </the-navigation>
+  <header class="grid grid-cols-2 items-center w-full bg-slate-900 p-2">
     <TheLogo />
-    <TheToggle />
+    <div class="flex items-center justify-self-end">
+      <TheNav />
+      <TheToggle />
+    </div>
   </header>
 </template>
 <script setup>
 import TheLogo from "../TheLogo.vue";
-import TheNavigation from "./TheNavigation";
+import TheNav from "./TheNav.vue";
+import TheToggle from "./TheToggle.vue";
 </script>
