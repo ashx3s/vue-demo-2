@@ -1,7 +1,8 @@
 <template>
   <header class="grid w-full bg-slate-900">
+    <the-navigation> </the-navigation>
     <TheLogo />
-    <TheNavigation />
+    <TheToggle />
   </header>
 </template>
 <script setup>
