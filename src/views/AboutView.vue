@@ -33,6 +33,7 @@
         </div>
       </div>
     </section>
+    <section></section>
   </main>
 </template>
 <script setup>
@@ -41,6 +42,7 @@ import BaseHeader from "../components/layout/BaseHeader.vue";
 import BaseList from "../components/utilities/BaseList.vue";
 import BaseListItem from "../components/utilities/BaseListItem.vue";
 import BaseButton from "../components/utilities/BaseButton.vue";
+
 // original data
 const numArr = [2, 4, 6, 8];
 

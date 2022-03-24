@@ -1,13 +1,13 @@
 <template>
   <img
-    :src="props.path"
+    :src="props.url"
     :alt="props.altText"
     class="w-24 max-w-md rounded-t-sm"
   />
 </template>
 <script setup>
 const props = defineProps({
-  path: {
+  url: {
     type: String,
     required: true,
   },
