@@ -39,8 +39,14 @@
           >
         </base-card>
       </div>
-      <!-- Product Card that focuses on props -->
     </section>
+    <!-- Product Card that focuses on props
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-8">
+      <header class="text-center mb-4 col-span-full">
+        <h2 class="text-4xl font-semibold">Products</h2>
+      </header>
+    </section>
+    -->
   </main>
 </template>
 <script setup>
@@ -69,11 +75,18 @@ const cards = [
     image: require(`../assets/images/salad.jpeg`),
   },
 ];
-const productCard = {
-  title: "Product",
-  image: "im",
-  things: ["thing 1", "thing 2"],
-  actionUrl: "https://sait-wbdv.netlify.app",
-  actionText: "Click Me",
-};
+const products = [
+  {
+    title: "Product",
+    image: require("../assets/images/radio.jpeg"),
+    details: ["thing 1", "thing 2"],
+    actionUrl: "https://sait-wbdv.netlify.app",
+  },
+  {
+    title: "Product",
+    image: "im",
+    details: ["thing 1", "thing 2"],
+    actionUrl: "https://sait-wbdv.netlify.app",
+  },
+];
 </script>
