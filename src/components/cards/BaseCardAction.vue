@@ -1,7 +1,7 @@
 <template>
   <a
     :href="props.url"
-    class="grid place-items-center px-4 py-2 bg-blue-900 hover:bg-blue-600 hover:shadow-sm hover:shadow-blue-200 hover:ease-in-out active:bg-emerald-700"
+    class="grid place-content-center w-28 rounded-sm hover:shadow-md hover:shadow-slate-400 hover:ease-in-out m-1 px-4 py-2 cursor-pointer"
     ><slot></slot
   ></a>
 </template>

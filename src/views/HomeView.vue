@@ -1,31 +1,45 @@
 <template>
   <the-hero>Home Page</the-hero>
-  <main class="grid justify-center bg-slate-50 my-8 mx-6">
-    <section>
-      <p class="max-w-prose">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
-        voluptates similique sunt dicta atque doloremque molestias repellat
-        deserunt a aliquid assumenda necessitatibus perferendis, eaque
-        ratione tempore animi nemo ad. Commodi eos, odio soluta nihil
-        itaque, non voluptate excepturi cupiditate, provident repudiandae
-        neque voluptates aspernatur voluptatibus maiores animi perspiciatis
-        in nulla est ad iusto doloremque quasi unde reiciendis. Officiis
-        voluptatum amet reiciendis dolores eaque magnam animi autem
-        expedita pariatur ipsam veritatis impedit quisquam inventore velit
-        sunt blanditiis adipisci illum, et porro, eum similique iste veniam
-        sint maiores. Quibusdam dolorem commodi dignissimos ab veniam modi
-        ipsam architecto, recusandae sed velit! Culpa, doloremque!
-      </p>
+  <main class="grid place-content-center bg-slate-50 my-8 mx-6">
+    <section class="w-100 mx-auto m-12">
+      <header class="text-center mb-4">
+        <h2 class="text-4xl font-semibold leading-8">Latin Party</h2>
+      </header>
+      <div>
+        <p class="max-w-prose text-lg">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
+          voluptates similique sunt dicta atque doloremque molestias
+          repellat deserunt a aliquid assumenda necessitatibus perferendis,
+          eaque ratione tempore animi nemo ad. Commodi eos, odio soluta
+          nihil itaque, non voluptate excepturi cupiditate, provident
+          repudiandae neque voluptates aspernatur voluptatibus maiores
+          animi perspiciatis in nulla est ad iusto doloremque quasi unde
+          reiciendis. Officiis voluptatum amet reiciendis dolores eaque
+          magnam animi autem expedita pariatur ipsam veritatis impedit
+          quisquam inventore velit sunt blanditiis adipisci illum, et
+          porro, eum similique iste veniam sint maiores. Quibusdam dolorem
+          commodi dignissimos ab veniam modi ipsam architecto, recusandae
+          sed velit! Culpa, doloremque!
+        </p>
+      </div>
     </section>
-    <section class="flex gap-8 w-100 bg-pink-200">
-      <!-- Not Rendering **Fix** -->
-      <base-card>
-        <base-card-title>{{ cards[0].title }}</base-card-title>
-        <base-card-text>{{ cards[0].description }}</base-card-text>
-      </base-card>
-
+    <section class="w-100 bg-emerald-100 py-8">
+      <header class="text-center mb-4">
+        <h2 class="text-4xl font-semibold">Card Layout</h2>
+      </header>
+      <div class="flex flex-wrap justify-center gap-8">
+        <!-- Not Rendering **Fix** -->
+        <base-card v-for="card in cards" :key="card.id">
+          <base-card-title>{{ card.title }}</base-card-title>
+          <base-card-image :path="card.image" />
+          <base-card-text>{{ card.description }}</base-card-text>
+          <base-card-action
+            class="bg-emerald-300 text-slate-900 hover:bg-emerald-400 hover:shadow-md shadow-emerald-600"
+            >Buy</base-card-action
+          >
+        </base-card>
+      </div>
       <!-- Product Card that focuses on props -->
-      <ProductCard :cardInfo="productCard" />
     </section>
   </main>
 </template>
@@ -35,19 +49,31 @@ import BaseCard from "../components/cards/BaseCard.vue";
 import BaseCardTitle from "../components/cards/BaseCardTitle.vue";
 import BaseCardImage from "../components/cards/BaseCardImage.vue";
 import BaseCardText from "../components/cards/BaseCardText.vue";
-import ProductCard from "@/components/cards/ProductCard.vue";
+import BaseCardAction from "../components/cards/BaseCardAction.vue";
+import ProductCard from "../components/cards/ProductCard.vue";
 
 const cards = [
   {
-    title: "Title",
-    description: "text for the card",
+    title: "Super Bowl",
+    description: "The last bowl you will ever need. Seriously.",
+    image: require(`../assets/images/food.jpeg`),
+  },
+  {
+    title: "Millenial Toast",
+    description: "The breakfast that tanked an economy.",
+    image: require(`../assets/images/avocadotoast.jpeg`),
+  },
+  {
+    title: "Kale Caesar",
+    description: "The personal fav of General Maximus Decimus Miridius.",
+    image: require(`../assets/images/salad.jpeg`),
   },
 ];
 const productCard = {
   title: "Product",
-  image: "img path",
+  image: "im",
   things: ["thing 1", "thing 2"],
-  actionUrl: "https://actiongohere.com",
+  actionUrl: "https://sait-wbdv.netlify.app",
   actionText: "Click Me",
 };
 </script>

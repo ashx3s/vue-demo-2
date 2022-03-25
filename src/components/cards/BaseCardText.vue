@@ -1,5 +1,7 @@
 <template>
-  <p class="tracking-wide text-slate-900 w-20 lg:w-28">
+  <p
+    class="text-center tracking-wide leading-5 text-slate-900 my-1 hidden sm:block"
+  >
     <slot></slot>
   </p>
 </template>
