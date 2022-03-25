@@ -1,10 +1,6 @@
 <template>
   <base-header :title="'About Page'">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
-      perferendis modi molestias obcaecati placeat pariatur atque ea
-      corporis voluptates odio.
-    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   </base-header>
   <main class="h-screen">
     <section
