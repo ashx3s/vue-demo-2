@@ -61,7 +61,7 @@ import ProductCard from "../components/cards/ProductCard.vue";
 const cards = [
   {
     title: "Super Bowl",
-    description: "Official sponsor of the Snoop and Dre half-time show.",
+    description: "A home run of a good time.",
     image: require(`../assets/images/food.jpeg`),
   },
   {
